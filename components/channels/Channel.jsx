@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 
 class Channel extends Component {
-    const {channel} = this.props
-
     onClick(e) {
         e.preventDefault();
         const {setChannel, channel} = this.props;
@@ -10,11 +8,14 @@ class Channel extends Component {
     }
 
     render() {
-        <li>
-            <a onClick={this.onClick.bind(this)}>
-                {channel.name}
-            </a>
-        </li>
+        const {channel} = this.props;
+        return (
+            <li>
+                <a onClick={this.onClick.bind(this)}>
+                    {channel.name}
+                </a>
+            </li>
+        )
     }
 }
 

@@ -1,13 +1,14 @@
-import React, {Component} from 'react',
-import Channel from './Channel.jsx'
+import React, {Component} from 'react';
+import Channel from './Channel.jsx';
 
 class ChannelList extends Component {
     render() {
         return (
                 <ul>{
                     this.props.channels.map( chan => {
-                        <Channel 
+                        return <Channel 
                             channel={chan}
+                            key={chan.id}
                             setChannel={this.props.setChannel}
                         />
                     })
